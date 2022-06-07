@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bg"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/parent_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="-30dp"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:src="@drawable/ic_mobile"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/set_mpin"
+            android:textColor="@color/grey_80"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:textColor="@color/grey_60"
+            android:textSize="12sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_staff_mapping_cv_emp_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/transparent"
+            android:visibility="visible"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPaddingLeft="20dp"
+            app:contentPaddingRight="20dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <me.philio.pinentry.PinEntryView
+                    android:id="@+id/pinview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:cursorVisible="true"
+                    android:imeOptions="actionGo"
+                    android:visibility="visible"
+                    app:accentType="character"
+                    app:accentWidth="@dimen/_1sdp"
+                    app:digitBackground="@drawable/bg_circle"
+                    app:digitElevation="@dimen/_1sdp"
+                    app:digitHeight="40dp"
+                    app:digitSpacing="20dp"
+                    app:digitTextColor="@color/black"
+                    app:digitTextSize="8sp"
+                    app:digitWidth="38dp"
+                    app:mask="*"
+                    app:numDigits="4"
+                    app:pinAccentColor="@android:color/transparent"
+                    app:pinInputType="number" />
+
+                <me.philio.pinentry.PinEntryView
+                    android:id="@+id/pincnf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:cursorVisible="true"
+                    android:imeOptions="actionGo"
+                    android:visibility="visible"
+                    app:accentType="character"
+                    app:accentWidth="@dimen/_1sdp"
+                    app:digitBackground="@drawable/bg_circle"
+                    app:digitElevation="@dimen/_1sdp"
+                    app:digitHeight="40dp"
+                    app:digitSpacing="20dp"
+
+                    app:digitTextColor="@color/black"
+                    app:digitTextSize="8sp"
+                    app:digitWidth="38dp"
+                    app:mask="*"
+                    app:numDigits="4"
+                    app:pinAccentColor="@android:color/transparent"
+                    app:pinInputType="number" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/setPinBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+
+            android:layout_width="match_parent"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:text="Continue"
+            android:background="@drawable/grad_welcom"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="String" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guildeline1"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guildeline2"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+
+            <LinearLayout
+                android:id="@+id/layTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:elevation="@dimen/_2sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:background="@drawable/circleshape_1"
+                android:drawableTint="@color/text0range"
+                android:elevation="@dimen/_3sdp"
+                android:gravity="center"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+
+                android:textColor="@color/text0range"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/layTop"
+                app:layout_constraintStart_toStartOf="@id/guildeline1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="Transferring funds"
+                android:textAllCaps="true"
+                android:textColor="@color/text0range"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/layTop"
+                app:layout_constraintStart_toEndOf="@+id/btnBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/lay2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/color_grad_new"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/guildeline2"
+                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                app:layout_constraintTop_toBottomOf="@+id/layTop">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/quickTransferCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/failLAY"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_7sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                app:srcCompat="@drawable/remove" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text=""
+                                android:textColor="@color/textcolornew"
+                                android:textSize="@dimen/_18sdp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="Your transaction has failed"
+                                android:textColor="#F44336"
+                                android:textSize="@dimen/_16sdp"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/initiat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_7sdp">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="Initiating transfer of"
+                                android:textColor="@color/textcolornew"
+                                android:textSize="@dimen/_18sdp"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/transactionAmountTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="₹ 24,000"
+                                android:textColor="@color/textcolornew"
+                                android:textSize="@dimen/_18sdp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="@string/available_balance_after_this_transfer_will_be"
+                                android:textColor="@color/textcolornewgrey"
+                                android:textSize="@dimen/_10sdp"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/balanceYv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="₹00"
+                                android:textColor="@color/textcolornewgrey"
+                                android:textSize="@dimen/_10sdp"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/color_grad_new"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_15sdp">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="From"
+                                android:textColor="@color/textcolornew"
+                                android:textSize="@dimen/_11sdp"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                            <ImageView
+
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:src="@drawable/icici_i" />
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/fromNameTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:text="Swaminathan Reddy"
+                                    android:textColor="@color/textcolornew"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                    app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/fromAccountTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:text="221342095678"
+                                    android:textColor="@color/textcolornew"
+                                    android:textSize="@dimen/_11sdp"
+                                    app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                    app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/color_grad_new"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_15sdp">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="To"
+                                android:textColor="@color/textcolornew"
+                                android:textSize="@dimen/_11sdp"
+                                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                            <ImageView
+
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:src="@drawable/sbi" />
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/toNameTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:text=" "
+                                    android:textColor="@color/textcolornew"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                    app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/toAccountTV"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:text="0133435653659"
+                                    android:textColor="@color/textcolornew"
+                                    android:textSize="@dimen/_11sdp"
+                                    app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                                    app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/color_grad_new"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guildeline2"
+                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                app:layout_constraintTop_toBottomOf="@+id/lay2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="GRID VERIFICATION"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/please_enter_numbers_below_from_the_grid_printed_against_the_following_alphabets"
+
+                    android:textColor="@color/textcolornew"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/cardImg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".6"
+                        app:srcCompat="@drawable/cardback"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:columnCount="8"
+                        android:orientation="horizontal"
+                        android:rowCount="2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cardImg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="A"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:backgroundTint="#6ca17d"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="B"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="C"
+                            android:backgroundTint="#6ca17d"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="D"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="E"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="F"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="G"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="H"
+                            android:backgroundTint="#6ca17d"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="I"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="J"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="K"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="L"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="M"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="N"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="O"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/rect_card"
+                            android:fontFamily="@font/mulish_regular"
+                            android:padding="@dimen/_2sdp"
+                            android:text="P"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+
+                    </GridLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/this_is_back_of_your_31_rubyx_debit_card"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="B"
+                            android:textColor="@color/textcolornew"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/capsuleshapegrey"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="center"
+                            android:hint="**"
+                            android:inputType="numberPassword"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:padding="@dimen/_10sdp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolornew"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="C"
+                            android:textColor="@color/textcolornew"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/capsuleshapegrey"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="center"
+                            android:hint="**"
+                            android:inputType="numberPassword"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:padding="@dimen/_10sdp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolornew"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="H"
+                            android:textColor="@color/textcolornew"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/capsuleshapegrey"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="center"
+                            android:hint="**"
+                            android:inputType="numberPassword"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:padding="@dimen/_10sdp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textcolornew"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text=" OTP VERIFICATION "
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@null"
+                    android:elevation="@dimen/_2sdp"
+                    android:textColorHint="@color/textcolornewgrey"
+                    app:errorTextColor="@color/red"
+                    app:hintTextColor="@color/textcolornewgrey"
+                    app:passwordToggleEnabled="true">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/capsuleshapegrey"
+                        android:elevation="@dimen/_2sdp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:hint="Enter 6 digit OTP"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:padding="@dimen/_10sdp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textcolornewgrey"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--The validity for the OTP has expired. -->
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/the_validity_for_the_otp_has_expired"
+                    android:textColor="@color/textcolornew"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/resend_new_otp"
+                    android:textColor="@color/text0range"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/in_case_you_haven_t_received_the_sms"
+                    android:textColor="@color/textcolornew"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/not_received_your_otp_yet_please_send_a_sms_ibotp_to_5676766_or_9215676766_nrequest_should_be_sent_from_the_registered_mobile_number_nplease_do_not_share_otp_with_anyone_even_if_a_person_claims_to_be_an_icici_bank_official_nfor_further_details"
+                    android:textColor="@color/textcolornew"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/color_grad_new"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guildeline2"
+                app:layout_constraintStart_toStartOf="@+id/guildeline1"
+                app:layout_constraintTop_toBottomOf="@+id/lay2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTransfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/capsuleshape"
+                    android:elevation="@dimen/_1sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/transfer_now"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text0range"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@null"
+                    android:elevation="@dimen/_1sdp"
+                    android:fontFamily="@font/mulish_regular"
+
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text0range"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

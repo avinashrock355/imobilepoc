@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" />
+    <stroke
+        android:width="0.1dp"
+        android:color="@color/grey_10" /> <!--orange_500-->
+    <corners android:radius="50dp" />
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+</shape>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:innerRadius="0sp"
+        android:shape="ring"
+        android:thicknessRatio="2"
+        android:useLevel="false">
+
+        &lt;!&ndash;Here if you want to set transparent can set&ndash;&gt;
+        <solid android:color="@color/deep_purple_50" />
+
+
+        &lt;!&ndash;Here you can set your fab button border color&ndash;&gt;
+        &lt;!&ndash;<stroke
+            android:width="@dimen/_1sdp"
+            android:color="@color/red_900"
+            android:dashWidth="@dimen/_10sdp" />&ndash;&gt;
+
+        &lt;!&ndash;<padding
+            android:bottom="@dimen/_1sdp"
+            android:left="@dimen/_1sdp"
+            android:right="@dimen/_1sdp"
+            android:top="@dimen/_1sdp" />&ndash;&gt;
+    </shape>-->

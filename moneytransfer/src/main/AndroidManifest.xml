@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.icici.moneytransfer">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application>
+        <activity
+            android:launchMode="singleTask"
+             android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:name=".MoneyTransferActivity" />
+        <activity android:name=".views.customsearchable.SearchActivity" />
+    </application>
+</manifest>

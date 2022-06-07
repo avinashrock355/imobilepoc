@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guildeline1"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guildeline2"
+
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <LinearLayout
+        android:id="@+id/layoutTop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:orientation="horizontal" />
+    <ImageView
+        android:elevation="1dp"
+        android:id="@+id/imgUser"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/customer_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guildeline1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".02"
+        app:layout_constraintWidth_percent="0.35" />
+
+
+    <ImageView
+        android:elevation="1dp"
+        android:id="@+id/img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icicibank"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+        app:layout_constraintStart_toEndOf="@+id/imgUser"
+        app:layout_constraintTop_toTopOf="@+id/imgUser"
+
+        app:layout_constraintWidth_percent="0.35" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:elevation="1dp"
+        android:visibility="gone"
+        android:id="@+id/faqsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/circleshape_1"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:textColor="@color/text0range"
+        android:textSize="@dimen/_10sdp"
+        android:drawableTint="@color/text0range"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/helplabel"
+        app:layout_constraintTop_toTopOf="@id/imgUser"
+        android:drawableLeft="@drawable/ic_baseline_search_24" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:elevation="1dp"
+        android:id="@+id/helplabel"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circleshape_1"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/text0range"
+        android:textSize="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_baseline_notifications_24"
+        android:drawableTint="@color/text0range"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guildeline2"
+        app:layout_constraintTop_toTopOf="@id/imgUser"
+        android:drawableLeft="@drawable/ic_baseline_notifications_24" />
+
+
+
+    <FrameLayout
+        android:id="@+id/nav_host_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

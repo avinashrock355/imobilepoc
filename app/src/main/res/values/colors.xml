@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#ffffff</color>
+-->
+
+    <color name="colorPrimary">#CD252C</color>
+    <color name="colorPrimaryDark">#CD252C</color>
+    <color name="colorSecondary">#CD252C</color>
+    <color name="colorAccent">#CD252C</color>
+    <color name="colorred">#FEEBED</color>
+    <color name="appIconColor">#005A77</color>
+    <color name="colorred1">#F1E8E9</color>
+
+    <color name="transparency_color">#ccffffff</color>
+    <color name="primaryColor">#FAFAFA</color>
+
+    <color name="textPrimaryColor">#828282</color>
+    <color name="textHintColor">#FAFAFA</color>
+
+    <color name="rippleEffectMaskColor">#FAFAFA</color>
+    <color name="rippleEffectWaveColor">#bbbbbb</color>
+
+    <color name="black46">#464646</color>
+    <color name="black30">#030302</color>
+    <color name="green1">#13CE51</color>
+    <color name="green03">#03D738</color>
+    <color name="green2">#89C404</color>
+    <color name="orange">#FFB756</color>
+    <color name="blue">#5672FF</color>
+    <color name="blues">#829CF0</color>
+    <color name="blues111">#84E1E9</color>
+    <color name="rm">#FB8181</color>
+    <color name="yellow_color">#FFD687</color>
+
+    <color name="grey_3">#F7F7F7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_txt">#CBCBCB</color>
+    <color name="green_n">#14A505</color>
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="whiteg">#E9F6F4F4</color>
+    <color name="whiteg6">#E6E6E6</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="header_color">#FDFFFD</color>
+    <color name="header_color_dark">#CBCDCF</color>
+    <color name="button_color">#9CFB94</color>
+    <color name="text_color">#525653</color>
+    <color name="hint_color">#CBCCCB</color>
+    <color name="password_meter_weak">#FF6287</color>
+    <color name="text_color_blue">#0061C9</color>
+
+    <color name="highlight_color">#018d7a</color>
+    <color name="date_time_bg">#F3F5FA</color>
+    <color name="color_FBFBFB">#FBFBFB</color>
+    <color name="color_607082">#607082</color>
+
+    <color name="color_0B2239">#0B2239</color>
+    <color name="color_162C42">#162C42</color>
+
+    <color name="color_0AB9D1">#365787</color>
+    <color name="color_455769">#E0E3ED</color>
+    <color name="color_line">#30868A8D</color>
+    <color name="color_comment">#C6D4E0</color>
+
+    <color name="red">#F5F00E0E</color>
+    <color name="green">#20C65A</color>
+    <color name="text0range">#d16c13</color>
+    <color name="text0range1">#e77817</color>
+    <color name="textblue">#365787</color>
+    <color name="textbg">#feeee5</color>
+    <color name="textbgborder">#fee3d4</color>
+    <color name="bgborder">#ffe7d2</color>
+    <color name="textcolor">#0f366e</color>
+    <color name="textcolornew">#414141</color>
+    <color name="textcolornewgrey">#616571</color>
+    <color name="textcolornewgrey1">#71718e</color>
+    <color name="grey">#EBEDF6</color>
+    <color name="blue1">#8A3AEF</color>
+</resources>

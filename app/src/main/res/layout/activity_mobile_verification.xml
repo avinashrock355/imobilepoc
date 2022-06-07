@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteg6">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guildeline1"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guildeline2"
+
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <ImageView
+
+        android:id="@+id/img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icicibank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guildeline1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".02"
+        app:layout_constraintWidth_percent="0.35" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/faqsLabel"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/capsuleshape"
+        android:gravity="center"
+        android:text="@string/faqs"
+        android:visibility="gone"
+        android:textColor="@color/text0range"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/helplabel"
+        app:layout_constraintTop_toTopOf="@id/img" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/helplabel"
+        android:layout_width="@dimen/_50sdp"
+        android:visibility="gone"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/capsuleshape"
+        android:gravity="center"
+        android:text="@string/help"
+        android:textColor="@color/text0range"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guildeline2"
+        app:layout_constraintTop_toTopOf="@id/img" />
+
+    <LinearLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/bgborder"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/img">
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reounded"
+        android:padding="@dimen/_20sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/layoutContainer">
+
+        <ImageView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            android:src="@drawable/icicibank"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guildeline1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/mulish_regular"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/your_mobile_number_verification"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_26sdp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_mobile" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/mulish_regular"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/the_app_wills_send_sms_to_verify_your_mobile_number_registered_with_icici_n_standard_sms_charges_will_apply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+<!--
+    <Button
+        android:id="@+id/continueVarificationBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        android:text="Continue"
+        android:background="@drawable/grad_welcom"
+        android:layout_height="wrap_content"/>-->
+
+<include
+    android:id="@+id/layoutpin"
+    android:visibility="gone"
+    layout="@layout/act_otp_verify"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

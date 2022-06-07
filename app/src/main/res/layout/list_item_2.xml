@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:drawableStart="@drawable/icici_i"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:gravity="center_vertical"
+    android:drawablePadding="@dimen/_5sdp"
+    android:padding="@dimen/_10sdp"
+    android:fontFamily="@font/mulish_regular"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:drawableLeft="@drawable/icici_i" />
